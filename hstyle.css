@@ -1,30 +1,28 @@
-/* body{
+*{
     margin: 0;
     padding: 0;
-} */
+    box-sizing: border-box;
+}
 
 .nav{
     position:fixed;
     background-color: rgba(0,0,0,0.5);
     border-radius: 6px;
     width: 100%;
-    overflow: auto;
-}
-.nav h3{
-    display: inline-flex;
-
-        
-
-
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
 }
 .glow {
     font-size: 25px;
     color: #fff;
     text-align: center;
+    padding: 1rem;
     animation: glow 1s ease-in-out infinite alternate;
   }
   
-  @-webkit-keyframes glow {
+  @keyframes glow {
     from {
       text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #e60073, 0 0 40px #e60073, 0 0 50px #e60073, 0 0 60px #e60073, 0 0 70px #e60073;
     }
@@ -34,56 +32,61 @@
     }
   }
 .nav ul{
-    display: inline-flex;
-    overflow: auto;
-    margin-right: 2rem;
-    float: right;
-    
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
 }
 .nav li{
-    
     list-style: none;
-    margin: 9px 8px;
-    
-}
-.nav li a{
-    padding: 1px 2px;
-    text-decoration: none;
-    color: white;
-    border: none;
-    
-}
-.nav li a:hover{
-    color: red
+    margin: 9px 8px;  
 }
 .nav ul .search{
-    float:right;
-    margin: auto;
-    color: rgb(34, 2, 2);
-
-    
+    color: rgb(34, 2, 2); 
 }
 .nav input{
     border: 1px solid black;
     border-radius: 14px;
-    padding: 5px 15px;
-    height: 10px;
-    width: 90px;
+    padding: 1ex;
+    width: 15rem;
     background-color: lightyellow;
 }
-.nav .search img{
-    height: 17px;
-    width: 17px;
+.nav .search i{
+    font-size: 1.5rem;
 }
 .nav .search button{
     border: none;
-    background-color: rgba(0, 0, 0, .2)
-    
+    background-color: transparent;
+    cursor: pointer;
 }
-.nav .search img:hover{
-    background-color: white;
+.nav .search:hover i{
+    color: white;
 }
-
+.fa{
+    margin: 2px;
+    visibility: hidden;
+}
+.links:hover .fa{
+    visibility: visible;
+    animation: logo 4s infinite linear;
+}
+.links{
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    border-radius: 34px;
+    padding: 8px 10px;
+}
+.links:hover{
+    animation: linkhover 1s forwards ease-out;
+}
+@keyframes linkhover {
+    from {
+        text-shadow: 0 0 30px transparent;
+    }
+      to {
+        text-shadow: 0 0 20px #fff, 0 0 30px #ff4da6, 0 0 40px #ff4da6, 0 0 50px #ff4da6, 0 0 60px #ff4da6, 0 0 70px #ff4da6, 0 0 80px #ff4da6;
+      }  
+}
 /*  
 .home {
     background: -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0.6)), to(rgba(0, 0, 0, 0.6)));
